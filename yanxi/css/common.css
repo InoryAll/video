@@ -1,0 +1,285 @@
+@keyframes printWords {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    7.09% {
+        opacity: 1;
+        height: 0;
+    }
+    7.1% {
+        opacity: 1;
+        height: 7%;
+    }
+    14.19% {
+        opacity: 1;
+        height: 7%;
+    }
+    14.2% {
+        opacity: 1;
+        height: 14%;
+    }
+    21.29% {
+        opacity: 1;
+        height: 14%;
+    }
+    21.3% {
+        opacity: 1;
+        height: 21%;
+    }
+    27.39% {
+        opacity: 1;
+        height: 21%;
+    }
+    28.4% {
+        opacity: 1;
+        height: 28%;
+    }
+    34.49% {
+        opacity: 1;
+        height: 28%;
+    }
+    35.5% {
+        opacity: 1;
+        height: 35%;
+    }
+    41.59% {
+        opacity: 1;
+        height: 35%;
+    }
+    42.6% {
+        opacity: 1;
+        height: 42%;
+    }
+    49.69% {
+        opacity: 1;
+        height: 42%;
+    }
+    49.7% {
+        opacity: 1;
+        height: 49%;
+    }
+    56.79% {
+        opacity: 1;
+        height: 49%;
+    }
+    56.8% {
+        opacity: 1;
+        height: 56%;
+    }
+    63.89% {
+        opacity: 1;
+        height: 56%;
+    }
+    63.9% {
+        opacity: 1;
+        height: 63%;
+    }
+    70.99% {
+        opacity: 1;
+        height: 63%;
+    }
+    71% {
+        opacity: 1;
+        height: 70%;
+    }
+    77.09% {
+        opacity: 1;
+        height: 70%;
+    }
+    78.1% {
+        opacity: 1;
+        height: 77%;
+    }
+    85.79% {
+        opacity: 1;
+        height: 77%;
+    }
+    85.8% {
+        opacity: 1;
+        height: 84%;
+    }
+    92.89% {
+        opacity: 1;
+        height: 84%;
+    }
+    92.9% {
+        opacity: 1;
+        height: 91%;
+    }
+    98.99% {
+        opacity: 1;
+        height: 91%;
+    }
+    99% {
+        opacity: 1;
+        height: 98%;
+    }
+}
+@keyframes shareFadeIn {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    10% {
+        visibility: visible;
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+.loading {
+    visibility: visible;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #eaeef1;
+    color: #454344;
+}
+.loading .loading-content {
+    position: absolute;
+    font-size: 0.46875rem;
+    width: 0.625rem;
+    height: 10.3125rem;
+    left: 50%;
+    top: 50%;
+    margin-left: -0.3125rem;
+    margin-top: -6.25rem;
+}
+.loading .loading-content .content {
+    height: 10.3125rem;
+    animation: printWords 1.8s linear 0.3s 1;
+    animation-fill-mode: both;
+    overflow: hidden;
+    letter-spacing: 0.15625rem;
+}
+.loading .loading-content .loading-content-dot {
+    text-align: center;
+}
+.loading .loading-info {
+    position: absolute;
+    width: 100%;
+    height: 0.78125rem;
+    font-size: 0.46875rem;
+    font-style: italic;
+    line-height: 0.78125rem;
+    text-align: center;
+    top: 50%;
+    margin-top: 3.4375rem;
+}
+.loading-hidden {
+    visibility: hidden;
+}
+.mask {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.4;
+}
+.mask-visible {
+    visibility: visible;
+}
+.play-container {
+    visibility: hidden;
+    position: absolute;
+    width: 1.3125rem;
+    height: 1.3125rem;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.65625rem;
+    margin-left: -0.65625rem;
+}
+.play-container .play {
+    width: 1.3125rem;
+    height: 1.3125rem;
+    background: url('../img/play.png') no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.play-container-visible {
+    visibility: visible;
+}
+.media-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.015625rem;
+    height: 0.015625rem;
+}
+.media-container .media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.media-container-visible {
+    width: 100%;
+    height: 100%;
+}
+.mask-black {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 1;
+}
+.mask-black-visible {
+    visibility: visible;
+}
+.button-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../img/share.jpg");
+    background-size: 100% 100%;
+    animation: shareFadeIn 3s linear 0.3s 1;
+    animation-fill-mode: both;
+}
+.button-container .button,
+.button-container .button-border {
+    position: absolute;
+    text-decoration: none;
+    width: 5.9375rem;
+    height: 0.9375rem;
+    background: #444444;
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.9375rem;
+    border-radius: 12px;
+    bottom: 4.375rem;
+    left: 50%;
+    margin-left: -2.96875rem;
+    letter-spacing: 0.0625rem;
+    font-size: 0.46875rem;
+}
+.button-container .button {
+    z-index: 2;
+}
+.button-container .button-border {
+    margin-left: -3.0625rem;
+    margin-bottom: -0.125rem;
+    background: transparent;
+    border: 4px solid #00a23d;
+}
